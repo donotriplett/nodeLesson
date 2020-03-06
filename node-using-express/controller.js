@@ -9,7 +9,7 @@ router.get("/sample", (req, res) => {
   //parse URL to gain access to specific parts of url
   const reqUrl = new URL(req.url, `http://${req.headers.host}`);
 
-  console.log("Request Type:" + req.method + " Endpoint: " + reqUrl.pathname);
+  console.log(reqUrl);
 
   //send request and response to service to handle logic
   service.sampleRequest(req, res);
@@ -18,7 +18,7 @@ router.get("/sample", (req, res) => {
 //Post endpoint /test
 router.post("/test", (req, res) => {
   const reqUrl = new URL(req.url, `http://${req.headers.host}`);
-  console.log("Request Type:" + req.method + " Endpoint: " + reqUrl.pathname);
+  console.log(reqUrl);
   service.testRequest(req, res);
 });
 

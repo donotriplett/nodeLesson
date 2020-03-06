@@ -9,7 +9,6 @@ module.exports = http.createServer((req, res) => {
   //parse URL to gain access to specific parts of url
   const reqUrl = new URL(req.url, `http://${req.headers.host}`);
 
-  console.log(reqUrl)
   //GET Endpoint /sample
   if (reqUrl.pathname === "/sample" && req.method === "GET") {
     console.log("Request Type:" + req.method + " Endpoint: " + reqUrl.pathname);

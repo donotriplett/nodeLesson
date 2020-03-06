@@ -41,7 +41,7 @@ exports.testRequest = (req, res) => {
   //listen for the stream to close, and then fire our function
   req.on("end", function() {
     //parse our json stringified request body to JSON we can dig into
-    postBody = JSON.parse(body);
+    let postBody = JSON.parse(body);
 
     //build response variable into object with the supplied request body
     let response = {

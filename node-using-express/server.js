@@ -7,13 +7,13 @@ const app = express();
 //specify port to 3000 in variable
 const port = 3000;
 
-//store controller in variable
+//importing and storing controller in variable
 const controller = require("./controller");
 
-//converts incoming request body to JSON
+//mounts middleware that converts incoming request body to JSON
 app.use(express.json());
 
-//mounts controller to express instance
+//mounts controller as middleware to express instance
 app.use(controller);
 
 //tells server to run and which port to listen on
