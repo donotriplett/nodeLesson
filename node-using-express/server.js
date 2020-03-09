@@ -8,13 +8,13 @@ const app = express();
 const port = 3000;
 
 //importing and storing controller in variable
-const controller = require("./controller");
+const miniApp = require("./controller");
 
 //mounts middleware that converts incoming request body to JSON
 app.use(express.json());
 
 //mounts controller as middleware to express instance
-app.use(controller);
+app.use(miniApp);
 
 //tells server to run and which port to listen on
-app.listen(port, () => console.log(`Example app listening on port ${port}`));
+app.listen(port, () => console.log(`Server running on port ${port}`));
