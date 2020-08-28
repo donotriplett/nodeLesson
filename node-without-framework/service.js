@@ -35,7 +35,7 @@ exports.sampleRequest = (req, res) => {
 
 exports.testRequest = (req, res) => {
   //initialize body variable to store request body
-  body = "";
+  let body = "";
 
   //open up a stream for the request body to flow in,
   //the request body can possibly come in multiple waves so we open a channel until we have recieved the whole body.
@@ -66,5 +66,5 @@ exports.invalidRequest = (req, res) => {
   //set response header to indicate plain text response body
   res.setHeader("Content-Type", "text/plain");
   //ends the response process and sends an invalid response string
-  res.end("Invalid Request");
+  res.end("Invalid Request: Route does not exist");
 };

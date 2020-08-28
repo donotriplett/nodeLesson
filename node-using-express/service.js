@@ -44,5 +44,5 @@ exports.testRequest = (req, res) => {
 //catch all response for any unavailable routes
 exports.invalidRequest = (req, res) => {
   //sends the requester a response with status 404 and "invalid request" as text
-  res.status(404).send("Invalid Request");
+  res.status(404).send("Invalid Request: Route does not exist");
 };

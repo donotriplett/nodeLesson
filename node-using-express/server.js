@@ -16,5 +16,5 @@ app.use(express.json());
 //mounts controller as middleware to express instance
 app.use(miniApp);
 
-//tells server to run and which port to listen on
+//tells server to start listening(run) and which port to listen on
 app.listen(port, () => console.log(`Server running on port ${port}`));

@@ -1,4 +1,4 @@
-//import express module and calling Router class constructor(similar to http.createServer)
+//import express module and calling Router method(similar to http.createServer)
 const router = require("express").Router();
 
 //import service file, handles endpoint logic
